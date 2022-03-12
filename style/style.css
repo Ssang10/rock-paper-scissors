@@ -1,0 +1,92 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #d8d2cb;
+}
+
+.play-screen {
+  max-width: 450px;
+  width: 100%;
+  max-height: 550px;
+  padding: 30px;
+  background-color: #495371;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.play-screen .fa-hand-scissors {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.play-screen i {
+  font-size: 70px;
+  color: #f5f5f5;
+}
+
+.computer-container {
+  height: 70px;
+}
+
+.computer-container i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.message-bar {
+  height: 40px;
+  width: 100%;
+  margin: 30px;
+  border-radius: 10px;
+  background-color: #f1e0ac;
+}
+
+.player-container {
+  height: 70px;
+}
+
+.buttons-container {
+  width: 100%;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.buttons-container i {
+  background-color: rgba(128, 128, 128, 0.253);
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.buttons-container i:hover {
+  background-color: rgba(128, 128, 128, 0.541);
+}
+/*# sourceMappingURL=style.css.map */
