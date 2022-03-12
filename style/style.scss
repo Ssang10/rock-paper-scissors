@@ -39,6 +39,7 @@ body {
 
   i {
     transform: rotate(180deg);
+    width: 62px;
   }
 }
 
@@ -49,10 +50,38 @@ body {
   border-radius: 10px;
 
   background-color: #f1e0ac;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: #62848a;
+    font-weight: 700;
+    font-size: 18px;
+  }
 }
 
 .player-container {
   height: 70px;
+
+  i {
+    width: 62px;
+  }
+}
+
+.score-card {
+  background-color: rgba(128, 128, 128, 0.541);
+  color: #f5f5f5;
+
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 20px;
+
+  position: relative;
+  bottom: 60px;
+  left: 180px;
 }
 
 .buttons-container {

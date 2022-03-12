@@ -1,14 +1,32 @@
-const playerContainer = document.querySelector(".player-container");
+const player = document.querySelector(".player-container .play");
+const comp = document.querySelector(".computer-container .play");
 
 const play = (move) => {
   switch (move) {
     case "rock":
-      playerContainer.innerHTML = "<i class='fa-solid fa-hand-back-fist'></i>";
+      player.innerHTML = "<i class='fa-solid fa-hand-back-fist'></i>";
       break;
     case "paper":
-      playerContainer.innerHTML = "<i class='fa-solid fa-hand'></i>";
+      player.innerHTML = "<i class='fa-solid fa-hand'></i>";
       break;
     case "scissor":
-      playerContainer.innerHTML = "<i class='fa-solid fa-hand-scissors'></i>";
+      player.innerHTML = "<i class='fa-solid fa-hand-scissors'></i>";
+      break;
+  }
+
+  compPlay();
+};
+
+const compPlay = () => {
+  switch (Math.ceil(Math.random() * 3)) {
+    case 1:
+      comp.innerHTML = "<i class='fa-solid fa-hand-back-fist'></i>";
+      break;
+    case 2:
+      comp.innerHTML = "<i class='fa-solid fa-hand'></i>";
+      break;
+    case 3:
+      comp.innerHTML = "<i class='fa-solid fa-hand-scissors'></i>";
+      break;
   }
 };
