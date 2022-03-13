@@ -8,13 +8,17 @@ const playerScissors = document.querySelector(
   ".buttons-container .fa-hand-scissors"
 );
 const message = document.querySelector(".message-bar p");
+const playerScore = document.querySelector(".player-container .score-card");
+const compScore = document.querySelector(".computer-container .score-card");
 
 const win = () => {
   message.innerHTML = "win";
+  playerScore.innerHTML++;
 };
 
 const lose = () => {
   message.innerHTML = "Lose";
+  compScore.innerHTML++;
 };
 
 const draw = () => {
