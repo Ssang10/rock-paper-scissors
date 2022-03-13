@@ -7,34 +7,70 @@ const playerPaper = document.querySelector(".buttons-container .fa-hand");
 const playerScissors = document.querySelector(
   ".buttons-container .fa-hand-scissors"
 );
+const message = document.querySelector(".message-bar p");
+
+const win = () => {
+  message.innerHTML = "win";
+};
+
+const lose = () => {
+  message.innerHTML = "Lose";
+};
+
+const draw = () => {
+  message.innerHTML = "Draw";
+};
+
+const gameResult = (playerMove, compMove) => {
+  if (
+    (playerMove === "rock" && compMove === "scissors") ||
+    (playerMove === "paper" && compMove === "rock") ||
+    (playerMove === "scissors" && compMove === "paper")
+  ) {
+    win();
+  } else if (
+    (playerMove === "scissors" && compMove === "rock") ||
+    (playerMove === "rock" && compMove === "paper") ||
+    (playerMove === "paper" && compMove === "scissors")
+  ) {
+    lose();
+  } else {
+    draw();
+  }
+};
 
 const play = (move) => {
+  let playerMove;
+
   switch (move) {
     case "rock":
       player.innerHTML = "<i class='fa-solid fa-hand-back-fist'></i>";
+      playerMove = "rock";
       break;
     case "paper":
       player.innerHTML = "<i class='fa-solid fa-hand'></i>";
+      playerMove = "paper";
       break;
     case "scissors":
       player.innerHTML = "<i class='fa-solid fa-hand-scissors'></i>";
+      playerMove = "scissors";
       break;
   }
 
-  compPlay();
+  gameResult(playerMove, compPlay());
 };
 
 const compPlay = () => {
   switch (Math.ceil(Math.random() * 3)) {
     case 1:
       comp.innerHTML = "<i class='fa-solid fa-hand-back-fist'></i>";
-      break;
+      return "rock";
     case 2:
       comp.innerHTML = "<i class='fa-solid fa-hand'></i>";
-      break;
+      return "paper";
     case 3:
       comp.innerHTML = "<i class='fa-solid fa-hand-scissors'></i>";
-      break;
+      return "scissors";
   }
 };
 
