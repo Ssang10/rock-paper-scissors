@@ -81,6 +81,12 @@ body {
   width: 62px;
 }
 
+.computer-container .fa-hand-scissors {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  width: 62px;
+}
+
 .message-bar {
   height: 40px;
   width: 100%;
